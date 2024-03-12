@@ -2,9 +2,9 @@
 # Name: Duong Ngo
 # Professor: Joe Gibss Politz
 
-# ** DEBUGGING SCENERIO 1:
+# DEBUGGING SCENERIO 1:
 A student Duong Ngo wrote a program to create mini-album management system. She created three files to run her program on Edstem. She had an error message from the terminal and went to Estem discussion to ask questions for her bugs. 
-1. The first Java file is named `Album.java`:
+The first Java file is named `Album.java`:
 
 ```
 public class Album {
@@ -15,7 +15,7 @@ public class Album {
 }
 ```
 
-2. The second Java file is named `Song.java`:
+The second Java file is named `Song.java`:
 
 ```
 public class Song {
@@ -34,7 +34,7 @@ public class Song {
 
 ```
 
-3. The third Bash Script file is named `runAlbum.sh`:
+The third Bash Script file is named `runAlbum.sh`:
 
 ```
 #!/bin/bash
@@ -48,11 +48,9 @@ rm Song.class
 java Album
 ```
 
-# ** EDSTEM CONVERSATIONS WITH TAS AND STUDENTS:
+# EDSTEM CONVERSATIONS WITH TAS AND STUDENTS:
 1. A post from Duong Ngo:
-Title: Compilation Error When Running Bash Script for Java Program
-Body:
-
+   
 ```
 Title: Compilation Error When Running Bash Script for Java Program
 Body:
@@ -126,12 +124,15 @@ java Album
 ```
 4. The output after the fix:
 After deleting the `rm Song.class` code line, the code now runs successfully because I deleted the line which removes the Song.class. Now, when compile and run the program, it first compiles both java files by command `javac Song.java Album.java`. Then, I use command `java Album` to run `Album` file.
+
 ![Image](Outputafterfix.png)
+
 It nows can print out the song information that we pass in the `Album.java` method.
 
-# ** DEBUGGING SCENERIO 2:
+# DEBUGGING SCENERIO 2:
 A student Duong Ngo creating her own simple calculator to do some basic additions, multiplication, division and subtraction. She had an error message from the terminal and went to Edstem discussion to ask questions for her bugs. She created two files to run her calculator project. 
-1. The first Java file named `Calculator.java`:
+The first Java file named `Calculator.java`:
+
 ```
 public class Calculator {
     public static void main(String[] args) {
@@ -150,17 +151,20 @@ public class Calculator {
 }
 
 ```
-2. The second file is bash script named `runCalculator.sh`:
+The second file is bash script named `runCalculator.sh`:
+
 ```
 #!/bin/bash
 javac Calculator.java
 java Calculator
 ```
+
 # EDSTEM CONVERSATIONS WITH TAS AND STUDENTS:
 1. A post from Duong Ngo:
+
+```
 Title: Terminal Throwing Exception Error
 Body:
-```
 Hi everyone,
 
 I'm working on my calculator code and have run into a pretty weird issue with division operations.
@@ -168,29 +172,38 @@ My expectation when the array includes negative numbers, the calculated average 
 For example, calculating the average of [2, -3, 4] gives me 2.
 However, its output skipping negative number, which is not expected. Attachment below is the screenshot of the output when I run the program.
 ```
+
 ![Image](ArrayError.png)
 2. Response from TAs:
+
 ```
 Can you provide the part of your code that sums up the array elements and calculates the average?
 It sounds like the issue might be related to how the sum is being accumulated, including negative numbers.
 I recommemend you add print statements to know each element as it's being added to the total sum?
 ```
+
 3. Student's follow-up post:
+
 ```
 Thank you for the help. After trying around with the code and adding print statement to the code,
 I realized the code accidentally skipping the negative numbers so I will try add if statement
 so that it will not skip the negative numbers and count the sum correctly.
 ```
+
 ![Image](Arrayprint.png)
+
 # SETUP INFORMATION AND FIXING THE BUG: 
 1. Set-up information:
+
 ```
 home/
 │
 ├── runCalculator.sh
 ├── Calculator.java
 ```
+
 2. The code before fix: (after adding print statement to know the error)
+
 ```
 public class Calculator {
     public static void main(String[] args) {
@@ -210,7 +223,9 @@ public class Calculator {
     }
 }
 ```
+
 3. The code after fix:
+
 ```
 public class Calculator {
     public static void main(String[] args) {
@@ -227,6 +242,7 @@ public class Calculator {
     }
 }
 ```
+
 4. Output after the fix: After fixing to include all the numbers. I deleted the if condition so when it goes through each number in the array, it does not skip negative numbers. Next, I use `^` to rerun the command `bash Calculator.sh`, thus having a correct average of sum. 
 
 ![Image](Arrayafter.png)
