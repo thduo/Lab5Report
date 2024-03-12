@@ -59,11 +59,20 @@ so I'm a little bit confused of what's going wrong. Does anyone have any ideas? 
 2. Response from TAs:
 ```
 Hello,
-It seems like it is having some trouble finding your class available at compile time but is missing during execution. Can you double check if all class files are present in the directory from which you're running your Java application? I recommend you use `ls` command to list all files in the directory and ensure both Albums class and MyCDs class. Also, could you verify the classpath by running `ls Song.class; echo $CLASSPATH`. This command will help you to know if the classes are being correctly located by the Java runtime.
+It seems like it is having some trouble finding your class available at compile time but is missing during execution.
+Can you double check if all class files are present in the directory from which you're running your Java application?
+I recommend you use `ls` command to list all files in the directory and ensure both Albums class and MyCDs class.
+Also, could you verify the classpath by running `ls Song.class; echo $CLASSPATH`.
+This command will help you to know if the classes are being correctly located by the Java runtime.
 ```
 3. Student's follow-up post:
 ```
-Thank you so much for your help. I tried `ls` command and realized that `MyCDs.class`. I also checked my classpath with echo $CLASSPATH, and it looks like it wasn't set to include the directory of my classes. Image attached below is my attempt to do `ls` command and `echo $CLASSPATH`. I checked the `runAlbums.sh` and realized that I have a line of code which is `rm MyCDs.class`. I think this is the main error here because I accidentally used the command `rm` so it removed `MyCDs` class when compiling and running a program. I think I will try to delete that line and add a different one to not trigger the bug anymore.  
+Thank you so much for your help. I tried `ls` command and realized that `MyCDs.class`.
+I also checked my classpath with echo $CLASSPATH, and it looks like it wasn't set to include the directory of my classes.
+Image attached below is my attempt to do `ls` command and `echo $CLASSPATH`.
+I checked the `runAlbums.sh` and realized that I have a line of code which is `rm MyCDs.class`.
+I think this is the main error here because I accidentally used the command `rm` so it removed `MyCDs` class when compiling and running a program.
+I think I will try to delete that line and add a different one to not trigger the bug anymore.  
 ```
 ![Image](lsMyCDs.png)
 # ** SETUP INFORMATION AND FIXING THE BUG: 
@@ -134,16 +143,23 @@ Body:
 ```
 Hi everyone,
 
-I'm working on my calculator code and have run into a pretty weird issue with division operations. My expectation when the array includes negative numbers, the calculated average seems incorrect. For example, calculating the average of [2, -3, 4] gives me 2. However, its output skipping negative number, which is not expected. Attachment below is the screenshot of the output when I run the program.
+I'm working on my calculator code and have run into a pretty weird issue with division operations.
+My expectation when the array includes negative numbers, the calculated average seems incorrect.
+For example, calculating the average of [2, -3, 4] gives me 2.
+However, its output skipping negative number, which is not expected. Attachment below is the screenshot of the output when I run the program.
 ```
 ![Image](ArrayError.png)
 2. Response from TAs:
 ```
-Can you provide the part of your code that sums up the array elements and calculates the average? It sounds like the issue might be related to how the sum is being accumulated, including negative numbers. I recommemend you add print statements to know each element as it's being added to the total sum?
+Can you provide the part of your code that sums up the array elements and calculates the average?
+It sounds like the issue might be related to how the sum is being accumulated, including negative numbers.
+I recommemend you add print statements to know each element as it's being added to the total sum?
 ```
 3. Student's follow-up post:
 ```
-Thank you for the help. After trying around with the code and adding print statement to the code, I realized the code accidentally skipping the negative numbers so I will try add if statement so that it will not skip the negative numbers and count the sum correctly.
+Thank you for the help. After trying around with the code and adding print statement to the code,
+I realized the code accidentally skipping the negative numbers so I will try add if statement
+so that it will not skip the negative numbers and count the sum correctly.
 ```
 # ** SETUP INFORMATION AND FIXING THE BUG: 
 1. Set-up information:
