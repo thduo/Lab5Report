@@ -2,7 +2,7 @@
 # Name: Duong Ngo
 # Professor: Joe Gibss Politz
 
-# ** DEBUGGING SCENERIO 1:
+# DEBUGGING SCENERIO 1:
 A student Duong Ngo wrote a program to create mini-album management system. She created three files to run her program on Edstem. She had an error message from the terminal and went to Estem discussion to ask questions for her bugs. 
 1. The first Java file is named `Album.java`:
 ```
@@ -42,7 +42,7 @@ rm Song.class
 # Run the Album class
 java Album
 ```
-# ** EDSTEM CONVERSATIONS WITH TAS AND STUDENTS:
+# EDSTEM CONVERSATIONS WITH TAS AND STUDENTS:
 1. A post from Duong Ngo:
 Title: Compilation Error When Running Bash Script for Java Program
 Body:
@@ -75,7 +75,7 @@ I think this is the main error here because I accidentally used the command `rm`
 I think I will try to delete that line and add a different one to not trigger the bug anymore.  
 ```
 ![Image](lsMyCDs.png)
-# ** SETUP INFORMATION AND FIXING THE BUG: 
+# SETUP INFORMATION AND FIXING THE BUG: 
 1. Set-up information:
 ```
 home/
@@ -139,7 +139,7 @@ public class Calculator {
 javac Calculator.java
 java Calculator
 ```
-# ** EDSTEM CONVERSATIONS WITH TAS AND STUDENTS:
+# EDSTEM CONVERSATIONS WITH TAS AND STUDENTS:
 1. A post from Duong Ngo:
 Title: Terminal Throwing Exception Error
 Body:
@@ -165,7 +165,7 @@ I realized the code accidentally skipping the negative numbers so I will try add
 so that it will not skip the negative numbers and count the sum correctly.
 ```
 ![Image](Arrayprint.png)
-# ** SETUP INFORMATION AND FIXING THE BUG: 
+# SETUP INFORMATION AND FIXING THE BUG: 
 1. Set-up information:
 ```
 home/
@@ -210,11 +210,11 @@ public class Calculator {
     }
 }
 ```
-4.Output after the fix: After fixing to include all the numbers. I deleted the if condition so when it goes through each number in the array, it does not skip negative numbers. Next, I use `^` to rerun the command `bash Calculator.sh`, thus having a correct average of sum. 
+4. Output after the fix: After fixing to include all the numbers. I deleted the if condition so when it goes through each number in the array, it does not skip negative numbers. Next, I use `^` to rerun the command `bash Calculator.sh`, thus having a correct average of sum. 
 
 ![Image](Arrayafter.png)
 
-# ** REFLECTION:
+# REFLECTION:
 In this second half of the quarter, there are lots of interesting information that I learned from labs and lectures. In lab sections, I learned how to work in groups and improve my coding skills from that. I learned how to share git repository to my teammates so we can make changes together. Additionally, the TAs help me a lot of to further understand Git controls and code bugs that I feel coding is more flexible and approachable to me now. Initially, I had a very little knowledge of Github and viewed it as a platform for coding or apply for jobs only. However, after several weeks of using Github, I am getting more familiar to use Github as a powerful tool for code review, discussion and team projects. This skill is important for me in the future because learning how to adjust code snippets or reviewing codes can significantly improve my code equality and team collaboration.  
 
 
