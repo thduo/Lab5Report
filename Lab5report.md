@@ -121,14 +121,17 @@ public class Calculator {
         int[] numbers = {2, -2, 4}; // Example array
         double sum = 0;
         for (int num : numbers) {
+            if (num >= 0) {
                 System.out.println("Adding " + num + " to sum");
                 sum += num;
-        }
+            }
         double average = sum / numbers.length;
         System.out.println("Calculated sum: " + sum);
         System.out.println("Average: " + average);
+        }
     }
 }
+
 ```
 2. The second file is bash script named `runCalculator.sh`:
 ```
@@ -164,10 +167,12 @@ so that it will not skip the negative numbers and count the sum correctly.
 ![Image](Arrayprint.png)
 # ** SETUP INFORMATION AND FIXING THE BUG: 
 1. Set-up information:
+```
 home/
 │
 ├── runCalculator.sh
 ├── Calculator.java
+```
 2. The code before fix: (after adding print statement to know the error)
 ```
 public class Calculator {
