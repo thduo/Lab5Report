@@ -49,7 +49,7 @@ java Album
 ```
 
 # EDSTEM CONVERSATIONS WITH TAS AND STUDENTS:
-1. A post from Duong Ngo:
+A post from Duong Ngo:
    
 ```
 Title: Compilation Error When Running Bash Script for Java Program
@@ -62,7 +62,7 @@ so I'm a little bit confused of what's going wrong. Does anyone have any ideas? 
 ```
 
 ![Image](BugPost.png)
-2. Response from TAs:
+Response from TAs:
 
 ```
 Hello,
@@ -73,7 +73,7 @@ Also, could you verify the classpath by running `ls Song.class; echo $CLASSPATH`
 This command will help you to know if the classes are being correctly located by the Java runtime.
 ```
 
-3. Student's follow-up post:
+Student's follow-up post:
 
 ```
 Thank you so much for your help. I tried `ls` command and realized that `Song.class`.
@@ -85,8 +85,8 @@ I think I will try to delete that line and add a different one to not trigger th
 ```
 ![Image](lsMyCDs.png)
 
-# ** SETUP INFORMATION AND FIXING THE BUG: 
-1. Set-up information:
+# SETUP INFORMATION AND FIXING THE BUG: 
+Set-up information:
 
 ```
 home/
@@ -96,7 +96,7 @@ home/
 └── Song.java
 ```
 
-2. The code before fix:
+The code before fix:
 
 ```
 #!/bin/bash
@@ -110,7 +110,7 @@ rm Song.class
 java Album
 ```
 
-3. The code after fix:
+The code after fix:
 
 ```
 #!/bin/bash
@@ -122,7 +122,7 @@ javac Song.java Album.java
 java Album
 
 ```
-4. The output after the fix:
+The output after the fix:
 After deleting the `rm Song.class` code line, the code now runs successfully because I deleted the line which removes the Song.class. Now, when compile and run the program, it first compiles both java files by command `javac Song.java Album.java`. Then, I use command `java Album` to run `Album` file.
 
 ![Image](Outputafterfix.png)
@@ -160,7 +160,7 @@ java Calculator
 ```
 
 # EDSTEM CONVERSATIONS WITH TAS AND STUDENTS:
-1. A post from Duong Ngo:
+A post from Duong Ngo:
 
 ```
 Title: Terminal Throwing Exception Error
@@ -174,7 +174,8 @@ However, its output skipping negative number, which is not expected. Attachment 
 ```
 
 ![Image](ArrayError.png)
-2. Response from TAs:
+
+Response from TAs:
 
 ```
 Can you provide the part of your code that sums up the array elements and calculates the average?
@@ -182,7 +183,7 @@ It sounds like the issue might be related to how the sum is being accumulated, i
 I recommemend you add print statements to know each element as it's being added to the total sum?
 ```
 
-3. Student's follow-up post:
+Student's follow-up post:
 
 ```
 Thank you for the help. After trying around with the code and adding print statement to the code,
@@ -193,7 +194,7 @@ so that it will not skip the negative numbers and count the sum correctly.
 ![Image](Arrayprint.png)
 
 # SETUP INFORMATION AND FIXING THE BUG: 
-1. Set-up information:
+Set-up information:
 
 ```
 home/
@@ -202,7 +203,7 @@ home/
 ├── Calculator.java
 ```
 
-2. The code before fix: (after adding print statement to know the error)
+The code before fix: (after adding print statement to know the error)
 
 ```
 public class Calculator {
@@ -224,7 +225,7 @@ public class Calculator {
 }
 ```
 
-3. The code after fix:
+The code after fix:
 
 ```
 public class Calculator {
@@ -243,7 +244,7 @@ public class Calculator {
 }
 ```
 
-4. Output after the fix: After fixing to include all the numbers. I deleted the if condition so when it goes through each number in the array, it does not skip negative numbers. Next, I use `^` to rerun the command `bash Calculator.sh`, thus having a correct average of sum. 
+Output after the fix: After fixing to include all the numbers. I deleted the if condition so when it goes through each number in the array, it does not skip negative numbers. Next, I use `^` to rerun the command `bash Calculator.sh`, thus having a correct average of sum. 
 
 ![Image](Arrayafter.png)
 
