@@ -67,11 +67,11 @@ This command will help you to know if the classes are being correctly located by
 ```
 3. Student's follow-up post:
 ```
-Thank you so much for your help. I tried `ls` command and realized that `MyCDs.class`.
+Thank you so much for your help. I tried `ls` command and realized that `Song.class`.
 I also checked my classpath with echo $CLASSPATH, and it looks like it wasn't set to include the directory of my classes.
 Image attached below is my attempt to do `ls` command and `echo $CLASSPATH`.
-I checked the `runAlbums.sh` and realized that I have a line of code which is `rm MyCDs.class`.
-I think this is the main error here because I accidentally used the command `rm` so it removed `MyCDs` class when compiling and running a program.
+I checked the `runAlbums.sh` and realized that I have a line of code which is `rm Song.class`.
+I think this is the main error here because I accidentally used the command `rm` so it removed `Song` class when compiling and running a program.
 I think I will try to delete that line and add a different one to not trigger the bug anymore.  
 ```
 ![Image](lsMyCDs.png)
@@ -161,6 +161,7 @@ Thank you for the help. After trying around with the code and adding print state
 I realized the code accidentally skipping the negative numbers so I will try add if statement
 so that it will not skip the negative numbers and count the sum correctly.
 ```
+![Image](Arrayprint.png)
 # ** SETUP INFORMATION AND FIXING THE BUG: 
 1. Set-up information:
 home/
@@ -206,7 +207,7 @@ public class Calculator {
 ```
 4.Output after the fix: After fixing to include all the numbers. I deleted the if condition so when it goes through each number in the array, it does not skip negative numbers. Next, I use `^` to rerun the command `bash Calculator.sh`, thus having a correct average of sum. 
 
-![Image](ArrayError.png)
+![Image](Arrayafter.png)
 
 # ** REFLECTION:
 In this second half of the quarter, there are lots of interesting information that I learned from labs and lectures. In lab sections, I learned how to work in groups and improve my coding skills from that. I learned how to share git repository to my teammates so we can make changes together. Additionally, the TAs help me a lot of to further understand Git controls and code bugs that I feel coding is more flexible and approachable to me now. Initially, I had a very little knowledge of Github and viewed it as a platform for coding or apply for jobs only. However, after several weeks of using Github, I am getting more familiar to use Github as a powerful tool for code review, discussion and team projects. This skill is important for me in the future because learning how to adjust code snippets or reviewing codes can significantly improve my code equality and team collaboration.  
