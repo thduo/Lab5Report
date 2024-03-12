@@ -50,7 +50,10 @@ Body:
 Title: Compilation Error When Running Bash Script for Java Program
 Body:
 Hey everyone,
-I'm struggling to run my Java program using a Bash script, but I keep getting a NoClassDefFoundError error. Attached screenshot below is the output in the terminal showing the bug. I think there's something wrong with my code compilation when running my Java program within the script, so I'm a little bit confused of what's going wrong. Does anyone have any ideas? Thank you so much!
+I'm struggling to run my Java program using a Bash script, but I keep getting a NoClassDefFoundError error.
+Attached screenshot below is the output in the terminal showing the bug.
+I think there's something wrong with my code compilation when running my Java program within the script,
+so I'm a little bit confused of what's going wrong. Does anyone have any ideas? Thank you so much!
 ```
 ![Image](BugPost.png)
 2. Response from TAs:
